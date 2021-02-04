@@ -1,6 +1,11 @@
 <div class="game__container">
   <h1>Family guess</h1>
 
+  <div *ngIf="pastQuestions">
+    <b>Past questions</b>
+    <div *ngFor="let question of pastQuestions">{{ question?.text }}</div>
+  </div>
+
   <div class="game__content">
 
     <div *ngIf="persons.length > 1 && questionsList && question" class="question__wrapper">
@@ -14,9 +19,11 @@
       </div>
 
       <div class="answer-options">
-        <button mat-raised-button color="accent" class="option" (click)="onClickNo()">No</button>
-        <button mat-raised-button color="accent" class="option" (click)="onClickYes()">Yes</button>
+        <button mat-raised-button color="accent" class="option big" (click)="onClickNo()">No</button>
+        <button mat-raised-button color="accent" class="option big" (click)="onClickYes()">Yes</button>
       </div>
+
+      <button mat-raised-button class="reset-button" (click)="initGame()">Reset</button>
 
     </div>
 
@@ -33,7 +40,7 @@
 
     </div>
 
-    <div class="not-found" *ngIf="persons.length === 0 || !question">
+    <div class="not-found" *ngIf="persons.length === 0 || (!questionsList?.length && persons.length)">
 
       <h2>We could not find it...</h2>
 

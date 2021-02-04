@@ -22,12 +22,19 @@
     justify-content: center;
 
     .option {
-      margin-right: 20px;
+      margin: 0 40px;
     }
   }
 
   .question__wrapper {
     transform: translateY(-50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .reset-button {
+      margin-top: 60px;
+    }
 
     .question {
       display: flex;
@@ -71,4 +78,10 @@
     flex-direction: column;
     align-items: center;
   }
+}
+
+button.big {
+  width: 150px;
+  height: 80px;
+  font-size: 22px;
 }

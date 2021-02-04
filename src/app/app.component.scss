@@ -22,7 +22,11 @@
     justify-content: center;
 
     .option {
-      margin: 0 40px;
+      margin: 0 10px;
+
+      @media (min-width: 400px) {
+        margin: 0 40px;
+      }
     }
   }
 
@@ -47,7 +51,14 @@
       }
 
       .question__text {
-        font-size: 30px;
+        text-align: center;
+        font-size: 25px;
+        line-height: 30px;
+
+        @media (min-width: 420px) {
+          font-size: 30px;
+          line-height: 35px;
+        }
       }
     }
   }
@@ -60,16 +71,31 @@
 
     .found__text {
       font-size: 20px;
-      margin-bottom: 30px;
+      line-height: 25px;
+      margin-bottom: 20px;
+
+      @media (min-width: 420px) {
+        margin-bottom: 30px;
+      }
     }
 
     .found__name {
       font-size: 35px;
+      margin-bottom: 20px;
+
+      @media (min-width: 420px) {
+        margin-bottom: 30px;
+      }
     }
 
     .found__picture {
-      max-height: 400px;
+      max-height: 250px;
       margin-bottom: 30px;
+
+      @media (min-width: 420px) {
+        max-height: 400px;
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -81,7 +107,13 @@
 }
 
 button.big {
-  width: 150px;
-  height: 80px;
+  width: 110px;
+  height: 60px;
   font-size: 22px;
+
+  @media (min-width: 420px) {
+    width: 150px;
+    height: 80px;
+    font-size: 18px;
+  }
 }

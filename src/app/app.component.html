@@ -1,10 +1,10 @@
 <div class="game__container">
   <h1>Family guess</h1>
 
-<!--  <div *ngIf="pastQuestions">-->
-<!--    <b>Past questions</b>-->
-<!--    <div *ngFor="let question of pastQuestions">{{ question?.text }}</div>-->
-<!--  </div>-->
+  <!--  <div *ngIf="pastQuestions">-->
+  <!--    <b>Past questions</b>-->
+  <!--    <div *ngFor="let question of pastQuestions">{{ question?.text }}</div>-->
+  <!--  </div>-->
 
   <div class="game__content">
 
@@ -30,9 +30,12 @@
     <!-- PERSON FOUND -->
     <div class="found" *ngIf="persons.length === 1">
 
-      <div class="found__text">We found the person! You are thinking about... <span
-              class="found__name">{{ persons[0].name }}</span>
+      <div class="found__text">
+        We found the person!
+        You are thinking about...
       </div>
+
+      <div class="found__name">{{ persons[0].name }}</div>
 
       <img src="assets/images/{{ persons[0].image }}" alt="" class="found__picture">
 

@@ -1,5 +1,6 @@
 import { Person } from 'src/app/data/person';
 import { Sex } from 'src/app/data/sex';
+import { Countries } from 'src/app/data/countries';
 
 export interface Question {
   text: string;
@@ -18,11 +19,6 @@ export const questions: Question[] = [
     filterFunction: (person: Person) => person.hasChildren,
     key: 'has_children'
   },
-  // {
-  //   text: 'Do I have green eyes?',
-  //   filterFunction: (person: Person) => person.eyesColor === EyesColor.GREEN,
-  //   key: 'has_green_eyes'
-  // },
   {
     text: 'Am I older than 30?',
     filterFunction: (person: Person) => person.age > 30,
@@ -54,6 +50,11 @@ export const questions: Question[] = [
     key: 'younger_sister'
   },
   {
+    text: 'Do I have or had an older sister?',
+    filterFunction: (person: Person) => person.hasOlderSister,
+    key: 'older_sister'
+  },
+  {
     text: 'Do I live in Jerusalem?',
     filterFunction: (person: Person) => person.livesJerusalem,
     key: 'lives_jerusalem'
@@ -62,6 +63,26 @@ export const questions: Question[] = [
     text: 'Do I have great children?',
     filterFunction: (person: Person) => person.hasGreatChildren,
     key: 'has_great_children'
+  },
+  {
+    text: 'Do I have an older brother?',
+    filterFunction: (person: Person) => person.hasOlderBrother,
+    key: 'older_brother'
+  },
+  {
+    text: 'Do I have a younger brother?',
+    filterFunction: (person: Person) => person.hasYoungerBrother,
+    key: 'younger_brother'
+  },
+  {
+    text: 'Am I married?',
+    filterFunction: (person: Person) => person.isMarried,
+    key: 'is_married'
+  },
+  {
+    text: 'Was I born in Morocco?',
+    filterFunction: (person: Person) => person.birthCountry === Countries.MOROCCO,
+    key: 'is_married'
   }
 ];
 

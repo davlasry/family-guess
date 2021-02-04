@@ -1,5 +1,6 @@
 import { EyesColor } from 'src/app/data/eyes-color';
 import { Sex } from 'src/app/data/sex';
+import { Countries } from 'src/app/data/countries';
 
 export interface Person {
   name: string;
@@ -12,10 +13,14 @@ export interface Person {
   hasChildren: boolean;
   hasGlasses: boolean;
   sex: Sex;
-  hasYoungerSister;
   speaksFrench: boolean;
   livesJerusalem: boolean;
   hasGreatChildren: boolean;
+  hasYoungerSister: boolean;
+  hasOlderSister: boolean;
+  hasYoungerBrother: boolean;
+  hasOlderBrother: boolean;
+  birthCountry: Countries;
 }
 
 export const persons: Person[] = [
@@ -34,6 +39,10 @@ export const persons: Person[] = [
     livesJerusalem: false,
     hasGreatChildren: false,
     image: 'david.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: true,
+    hasOlderBrother: false,
+    birthCountry: Countries.FRANCE
   },
   {
     name: 'Caro',
@@ -50,6 +59,10 @@ export const persons: Person[] = [
     livesJerusalem: false,
     hasGreatChildren: false,
     image: 'caro.jpg',
+    hasOlderSister: true,
+    hasYoungerBrother: false,
+    hasOlderBrother: true,
+    birthCountry: Countries.FRANCE
   },
   {
     name: 'Bamboo',
@@ -66,6 +79,10 @@ export const persons: Person[] = [
     livesJerusalem: false,
     hasGreatChildren: false,
     image: 'bamboo.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: false,
+    hasOlderBrother: false,
+    birthCountry: Countries.ISRAEL
   },
   {
     name: 'Eva',
@@ -82,6 +99,10 @@ export const persons: Person[] = [
     livesJerusalem: false,
     hasGreatChildren: false,
     image: 'eva.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: false,
+    hasOlderBrother: false,
+    birthCountry: Countries.ISRAEL
   },
   {
     name: 'Avigail',
@@ -98,6 +119,10 @@ export const persons: Person[] = [
     livesJerusalem: true,
     hasGreatChildren: false,
     image: 'avigail.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: false,
+    hasOlderBrother: false,
+    birthCountry: Countries.ISRAEL
   },
   {
     name: 'Talia',
@@ -114,9 +139,13 @@ export const persons: Person[] = [
     livesJerusalem: true,
     hasGreatChildren: false,
     image: 'talia.jpg',
+    hasOlderSister: true,
+    hasYoungerBrother: false,
+    hasOlderBrother: false,
+    birthCountry: Countries.ISRAEL
   },
   {
-    name: 'Aurelie',
+    name: 'Aure',
     age: 38,
     eyesColor: EyesColor.BROWN,
     isHuman: true,
@@ -129,7 +158,11 @@ export const persons: Person[] = [
     speaksFrench: true,
     livesJerusalem: true,
     hasGreatChildren: false,
-    image: 'default.jpg',
+    image: 'aurelie.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: false,
+    hasOlderBrother: true,
+    birthCountry: Countries.FRANCE
   },
   {
     name: 'Papa',
@@ -146,6 +179,10 @@ export const persons: Person[] = [
     livesJerusalem: true,
     hasGreatChildren: true,
     image: 'papa.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: true,
+    hasOlderBrother: false,
+    birthCountry: Countries.MOROCCO
   },
   {
     name: 'Maman',
@@ -162,6 +199,10 @@ export const persons: Person[] = [
     livesJerusalem: true,
     hasGreatChildren: true,
     image: 'maman.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: true,
+    hasOlderBrother: false,
+    birthCountry: Countries.ISRAEL
   },
   {
     name: 'Joel',
@@ -178,6 +219,10 @@ export const persons: Person[] = [
     livesJerusalem: true,
     hasGreatChildren: false,
     image: 'default.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: false,
+    hasOlderBrother: false,
+    birthCountry: Countries.FRANCE
   },
   {
     name: 'Yanir',
@@ -194,5 +239,109 @@ export const persons: Person[] = [
     livesJerusalem: false,
     hasGreatChildren: false,
     image: 'default.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: true,
+    hasOlderBrother: false,
+    birthCountry: Countries.ISRAEL
+  },
+  {
+    name: 'Laura',
+    age: 24,
+    eyesColor: EyesColor.BLUE,
+    isHuman: true,
+    isFamilyMember: true,
+    isMarried: false,
+    hasChildren: false,
+    hasGlasses: false,
+    sex: Sex.WOMAN,
+    hasYoungerSister: false,
+    speaksFrench: true,
+    livesJerusalem: false,
+    hasGreatChildren: false,
+    image: 'laura.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: false,
+    hasOlderBrother: true,
+    birthCountry: Countries.FRANCE
+  },
+  {
+    name: 'Steven',
+    age: 29,
+    eyesColor: EyesColor.BLUE,
+    isHuman: true,
+    isFamilyMember: true,
+    isMarried: false,
+    hasChildren: false,
+    hasGlasses: false,
+    sex: Sex.MAN,
+    hasYoungerSister: true,
+    speaksFrench: true,
+    livesJerusalem: false,
+    hasGreatChildren: false,
+    image: 'steven.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: false,
+    hasOlderBrother: true,
+    birthCountry: Countries.FRANCE
+  },
+  {
+    name: 'Danielle',
+    age: 36,
+    eyesColor: EyesColor.BROWN,
+    isHuman: true,
+    isFamilyMember: true,
+    isMarried: false,
+    hasChildren: false,
+    hasGlasses: false,
+    sex: Sex.WOMAN,
+    hasYoungerSister: true,
+    speaksFrench: false,
+    livesJerusalem: false,
+    hasGreatChildren: false,
+    image: 'danielle.jpg',
+    hasOlderSister: true,
+    hasYoungerBrother: false,
+    hasOlderBrother: false,
+    birthCountry: Countries.ISRAEL
+  },
+  {
+    name: 'Maman Rachel',
+    age: 78,
+    eyesColor: EyesColor.BROWN,
+    isHuman: true,
+    isFamilyMember: true,
+    isMarried: false,
+    hasChildren: true,
+    hasGlasses: false,
+    sex: Sex.WOMAN,
+    hasYoungerSister: true,
+    speaksFrench: true,
+    livesJerusalem: true,
+    hasGreatChildren: true,
+    image: 'rachel.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: true,
+    hasOlderBrother: false,
+    birthCountry: Countries.MOROCCO
+  },
+  {
+    name: 'Suzanne',
+    age: 57,
+    eyesColor: EyesColor.GREEN,
+    isHuman: true,
+    isFamilyMember: true,
+    isMarried: false,
+    hasChildren: true,
+    hasGlasses: false,
+    sex: Sex.WOMAN,
+    hasYoungerSister: true,
+    speaksFrench: true,
+    livesJerusalem: false,
+    hasGreatChildren: true,
+    image: 'suzanne.jpg',
+    hasOlderSister: false,
+    hasYoungerBrother: true,
+    hasOlderBrother: false,
+    birthCountry: Countries.MOROCCO
   }
 ];

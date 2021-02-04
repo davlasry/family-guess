@@ -1,16 +1,24 @@
 import { EyesColor } from 'src/app/data/eyes-color';
+import { Sex } from 'src/app/data/sex';
 
 export interface Person {
   name: string;
+  image: string;
   age: number;
   eyesColor: EyesColor;
   isHuman: boolean;
   isFamilyMember: boolean;
   isMarried: boolean;
   hasChildren: boolean;
+  hasGlasses: boolean;
+  sex: Sex;
+  hasYoungerSister;
+  speaksFrench: boolean;
+  livesJerusalem: boolean;
+  hasGreatChildren: boolean;
 }
 
-export const people: Person[] = [
+export const persons: Person[] = [
   {
     name: 'David',
     age: 30,
@@ -19,6 +27,13 @@ export const people: Person[] = [
     isFamilyMember: true,
     isMarried: true,
     hasChildren: true,
+    hasGlasses: false,
+    sex: Sex.MAN,
+    hasYoungerSister: true,
+    speaksFrench: true,
+    livesJerusalem: false,
+    hasGreatChildren: false,
+    image: 'david.jpg',
   },
   {
     name: 'Caro',
@@ -28,6 +43,13 @@ export const people: Person[] = [
     isFamilyMember: true,
     isMarried: true,
     hasChildren: true,
+    hasGlasses: false,
+    sex: Sex.WOMAN,
+    hasYoungerSister: false,
+    speaksFrench: true,
+    livesJerusalem: false,
+    hasGreatChildren: false,
+    image: 'caro.jpg',
   },
   {
     name: 'Bamboo',
@@ -37,6 +59,13 @@ export const people: Person[] = [
     isFamilyMember: false,
     isMarried: false,
     hasChildren: false,
+    hasGlasses: false,
+    sex: Sex.WOMAN,
+    hasYoungerSister: false,
+    speaksFrench: false,
+    livesJerusalem: false,
+    hasGreatChildren: false,
+    image: 'bamboo.jpg',
   },
   {
     name: 'Eva',
@@ -46,5 +75,124 @@ export const people: Person[] = [
     isFamilyMember: true,
     isMarried: false,
     hasChildren: false,
+    hasGlasses: false,
+    sex: Sex.WOMAN,
+    hasYoungerSister: false,
+    speaksFrench: false,
+    livesJerusalem: false,
+    hasGreatChildren: false,
+    image: 'eva.jpg',
+  },
+  {
+    name: 'Avigail',
+    age: 10,
+    eyesColor: EyesColor.BROWN,
+    isHuman: true,
+    isFamilyMember: true,
+    isMarried: false,
+    hasChildren: false,
+    hasGlasses: false,
+    sex: Sex.WOMAN,
+    hasYoungerSister: true,
+    speaksFrench: false,
+    livesJerusalem: true,
+    hasGreatChildren: false,
+    image: 'avigail.jpg',
+  },
+  {
+    name: 'Talia',
+    age: 7,
+    eyesColor: EyesColor.BROWN,
+    isHuman: true,
+    isFamilyMember: true,
+    isMarried: false,
+    hasChildren: false,
+    hasGlasses: false,
+    sex: Sex.WOMAN,
+    hasYoungerSister: false,
+    speaksFrench: false,
+    livesJerusalem: true,
+    hasGreatChildren: false,
+    image: 'talia.jpg',
+  },
+  {
+    name: 'Aurelie',
+    age: 38,
+    eyesColor: EyesColor.BROWN,
+    isHuman: true,
+    isFamilyMember: true,
+    isMarried: false,
+    hasChildren: true,
+    hasGlasses: false,
+    sex: Sex.WOMAN,
+    hasYoungerSister: true,
+    speaksFrench: true,
+    livesJerusalem: true,
+    hasGreatChildren: false,
+    image: 'default.jpg',
+  },
+  {
+    name: 'Papa',
+    age: 75,
+    eyesColor: EyesColor.BROWN,
+    isHuman: true,
+    isFamilyMember: true,
+    isMarried: true,
+    hasChildren: true,
+    hasGlasses: true,
+    sex: Sex.MAN,
+    hasYoungerSister: true,
+    speaksFrench: true,
+    livesJerusalem: true,
+    hasGreatChildren: true,
+    image: 'papa.jpg',
+  },
+  {
+    name: 'Maman',
+    age: 68,
+    eyesColor: EyesColor.BROWN,
+    isHuman: true,
+    isFamilyMember: true,
+    isMarried: true,
+    hasChildren: true,
+    hasGlasses: false,
+    sex: Sex.WOMAN,
+    hasYoungerSister: true,
+    speaksFrench: true,
+    livesJerusalem: true,
+    hasGreatChildren: true,
+    image: 'maman.jpg',
+  },
+  {
+    name: 'Joel',
+    age: 42,
+    eyesColor: EyesColor.BROWN,
+    isHuman: true,
+    isFamilyMember: true,
+    isMarried: true,
+    hasChildren: true,
+    hasGlasses: true,
+    sex: Sex.MAN,
+    hasYoungerSister: true,
+    speaksFrench: true,
+    livesJerusalem: true,
+    hasGreatChildren: false,
+    image: 'default.jpg',
+  },
+  {
+    name: 'Yanir',
+    age: 42,
+    eyesColor: EyesColor.BROWN,
+    isHuman: true,
+    isFamilyMember: false,
+    isMarried: false,
+    hasChildren: true,
+    hasGlasses: true,
+    sex: Sex.MAN,
+    hasYoungerSister: true,
+    speaksFrench: false,
+    livesJerusalem: false,
+    hasGreatChildren: false,
+    image: 'default.jpg',
   }
 ];

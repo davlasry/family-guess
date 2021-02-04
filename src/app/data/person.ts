@@ -165,7 +165,7 @@ export const persons: Person[] = [
     birthCountry: Countries.FRANCE
   },
   {
-    name: 'Papa',
+    name: 'Remy',
     age: 75,
     eyesColor: EyesColor.BROWN,
     isHuman: true,
@@ -185,7 +185,7 @@ export const persons: Person[] = [
     birthCountry: Countries.MOROCCO
   },
   {
-    name: 'Maman',
+    name: 'Myriam',
     age: 68,
     eyesColor: EyesColor.BROWN,
     isHuman: true,

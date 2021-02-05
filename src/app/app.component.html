@@ -1,5 +1,14 @@
-<div class="game__container">
+<div class="game__container" [style.direction]="translate.currentLang === 'he' ? 'rtl' : 'ltr'">
   <h1>Family guess</h1>
+
+  <h2>{{ 'test' | translate }}</h2>
+
+  <div class="languages">
+    <div (click)="translate.use(lang)" class="language" *ngFor="let lang of translate.getLangs()"
+         [class.active]="translate.currentLang === lang">
+      {{ lang }}
+    </div>
+  </div>
 
   <!--  <div *ngIf="pastQuestions">-->
   <!--    <b>Past questions</b>-->
@@ -16,11 +25,17 @@
 
         <div class="question__text">{{ question.text }}</div>
 
+        <h4>question.key: {{question.key}}</h4>
+
+        <div>{{ 'question.' + question.key | translate }}</div>
+
       </div>
 
       <div class="answer-options">
-        <button mat-raised-button color="accent" class="option big" (click)="onClickNo()">No</button>
-        <button mat-raised-button color="accent" class="option big" (click)="onClickYes()">Yes</button>
+        <button mat-raised-button color="accent" class="option big"
+                (click)="onClickNo()">{{ 'no' | translate }}</button>
+        <button mat-raised-button color="accent" class="option big"
+                (click)="onClickYes()">{{ 'yes' | translate }}</button>
       </div>
 
       <button mat-raised-button class="reset-button" (click)="initGame()">Reset</button>
@@ -31,13 +46,12 @@
     <div class="found" *ngIf="persons.length === 1">
 
       <div class="found__text">
-        We found the person!
-        You are thinking about...
+        The person you are thinking about is...
       </div>
 
       <div class="found__name">{{ persons[0].name }}</div>
 
-      <img src="assets/images/{{ persons[0].image }}" alt="" class="found__picture">
+      <img src="assets/images/{{ persons[0].images | random }}" alt="" class="found__picture">
 
       <button mat-raised-button color="primary" (click)="initGame()">Try again</button>
 

@@ -117,3 +117,18 @@ button.big {
     font-size: 18px;
   }
 }
+
+.languages {
+  display: flex;
+  flex-direction: row;
+
+  .language {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+
+    &.active {
+      color: blue;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Question, questions } from 'src/app/data/questions';
 import { persons } from 'src/app/data/person';
+import { filterQuestionsDeps } from 'src/app/utils/filter-deps';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -19,12 +21,24 @@ export class AppComponent implements OnInit {
     return this.persons?.length === 0 || (!this.questionsList?.length && this.persons.length > 0);
   }
 
+  constructor(public translate: TranslateService) {
+    // this language will be used as a fallback when a translation isn't found in the current language
+    translate.setDefaultLang('he');
+
+    translate.addLangs(['en', 'he']);
+
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    translate.use('he');
+  }
+
   ngOnInit(): void {
     this.initGame();
   }
 
   initGame(): void {
     this.questionsList = questions;
+    console.log('QUESTIONS LIST ', this.questionsList);
+
     this.question = this.getRandomQuestion();
 
     console.log('QUESTION', this.question.text);
@@ -37,7 +51,7 @@ export class AppComponent implements OnInit {
     console.log('ANSWER YES');
 
     this.persons = this.persons.filter(this.question.filterFunction);
-    this.afterQuestionAnswered();
+    this.afterQuestionAnswered('yes');
     console.log('PERSONS ', this.persons);
   }
 
@@ -45,7 +59,7 @@ export class AppComponent implements OnInit {
     console.log('ANSWER NO');
 
     this.persons = this.persons.filter((p) => !this.question.filterFunction(p));
-    this.afterQuestionAnswered();
+    this.afterQuestionAnswered('no');
     console.log('PERSONS ', this.persons);
   }
 
@@ -60,8 +74,9 @@ export class AppComponent implements OnInit {
   //   }
   // }
 
-  private afterQuestionAnswered(): void {
-    this.questionsList = this.questionsList.filter(q => q.key !== this.question.key);
+  private afterQuestionAnswered(answer: 'yes' | 'no'): void {
+    this.questionsList = filterQuestionsDeps(this.questionsList, this.question, answer);
+    // this.questionsList = this.questionsList.filter(q => q.key !== this.question.key);
 
     console.log('QUESTIONS LIST ', this.questionsList);
 

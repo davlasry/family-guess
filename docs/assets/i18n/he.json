@@ -1,0 +1,8 @@
+{
+  "test": "הינה הטסט",
+  "yes": "כן",
+  "no": "לא",
+  "question": {
+    "has_older_brother": "אח גדול?"
+  }
+}

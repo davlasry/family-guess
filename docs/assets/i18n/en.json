@@ -3,7 +3,32 @@
   "yes": "Yes",
   "no": "No",
   "question": {
-    "has_older_brother": "Has older brother?"
+    "is_human": "",
+    "is_animal": "",
+    "eyes_green": "",
+    "eyes_blue": "",
+    "has_children": "",
+    "age_more_30": "",
+    "age_30_or_less": "",
+    "is_woman": "",
+    "is_man": "",
+    "speaks_french": "",
+    "has_younger_sister": "",
+    "has_older_sister": "",
+    "lives_jerusalem": "",
+    "is_grand_parent": "",
+    "has_older_brother": "",
+    "has_younger_brother": "",
+    "is_married": "",
+    "born_morocco": "",
+    "born_france": "",
+    "born_israel": "",
+    "lives_israel": "",
+    "lives_france": "",
+    "first_name_starts_a": "",
+    "name_starts_s": "",
+    "has_glasses": "",
+    "is_grand_grand_parent": ""
   }
 }
 

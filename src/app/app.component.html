@@ -1,7 +1,7 @@
 <div class="game__container" [style.direction]="translate.currentLang === 'he' ? 'rtl' : 'ltr'">
   <h1>Family guess</h1>
 
-  <h2>{{ 'test' | translate }}</h2>
+<!--  <h2>{{ 'test' | translate }}</h2>-->
 
   <div class="languages">
     <div (click)="translate.use(lang)" class="language" *ngFor="let lang of translate.getLangs()"
@@ -25,9 +25,9 @@
 
         <div class="question__text">{{ question.text }}</div>
 
-        <h4>question.key: {{question.key}}</h4>
+<!--        <h4>question.key: {{question.key}}</h4>-->
 
-        <div>{{ 'question.' + question.key | translate }}</div>
+<!--        <div>{{ 'question.' + question.key | translate }}</div>-->
 
       </div>
 

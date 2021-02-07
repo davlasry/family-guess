@@ -1,22 +1,21 @@
 <div class="game__container" [style.direction]="translate.currentLang === 'he' ? 'rtl' : 'ltr'">
-  <h1>{{ 'words.title' | translate }}</h1>
 
-  <!--  <h2>{{ 'test' | translate }}</h2>-->
-  <h3>{{persons.length}}</h3>
+  <div class="header">
 
-  <div class="languages">
-    <div (click)="translate.use(lang)" class="language" *ngFor="let lang of translate.getLangs()"
-         [class.active]="translate.currentLang === lang">
-      {{ lang }}
-    </div>
+    <h1>{{ 'words.title' | translate }}</h1>
+
+    <app-language-picker></app-language-picker>
+
   </div>
 
+  <!--  DEBUGGING-->
+  <!--  <h2>{{ 'test' | translate }}</h2>-->
+  <!--  <h3>{{persons.length}} persons</h3>-->
   <!--  <div *ngIf="pastQuestions">-->
   <!--    <b>Past questions</b>-->
   <!--    <div *ngFor="let question of pastQuestions">{{ question?.text }}</div>-->
   <!--  </div>-->
-
-  <div class="question__title">{{ 'words.question' | translate }} {{ pastQuestions?.length }}</div>
+  <!--  <div class="question__title">{{ 'words.question' | translate }} {{ pastQuestions?.length }}</div>-->
 
   <div class="game__content">
 
@@ -51,4 +50,4 @@
       <button mat-raised-button color="primary" (click)="initGame()">Try again</button>
     </div>
 
-</div>
+  </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  QUESTIONS } from 'src/app/data/questions';
+import { QUESTIONS } from 'src/app/data/questions';
 import { PERSONS } from 'src/app/data/persons';
 import { filterQuestionsDeps } from 'src/app/utils/filter-questions';
 import { TranslateService } from '@ngx-translate/core';
@@ -28,12 +28,12 @@ export class AppComponent implements OnInit {
 
   constructor(public translate: TranslateService) {
     // this language will be used as a fallback when a translation isn't found in the current language
-    translate.setDefaultLang('he');
+    translate.setDefaultLang('en');
 
     translate.addLangs(['en', 'he']);
 
     // the lang to use, if the lang isn't available, it will use the current loader to get them
-    translate.use('he');
+    translate.use('en');
   }
 
   ngOnInit(): void {
@@ -70,7 +70,15 @@ export class AppComponent implements OnInit {
 
   getRandomQuestion(): Question {
     const randomIndex = Math.floor(Math.random() * this.questionsList.length);
-    return this.questionsList[randomIndex];
+    const pickedQuestion = this.questionsList[randomIndex];
+
+    // TODO: make it recursive and switch with the highest order question
+    // If there is a higher order question, pick that question
+    if (pickedQuestion.higherOrderQuestion) {
+      return this.questionsList?.find(q => q.key === pickedQuestion.higherOrderQuestion) || pickedQuestion;
+    }
+
+    return pickedQuestion;
   }
 
   // private checkIfFound(): void {

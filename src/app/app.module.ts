@@ -10,6 +10,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ResultComponent } from 'src/app/components/result/result.component';
+import { LanguagePickerComponent } from './components/language-picker/language-picker.component';
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -19,7 +20,8 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   declarations: [
     AppComponent,
     RandomPipe,
-    ResultComponent
+    ResultComponent,
+    LanguagePickerComponent
   ],
   imports: [
     BrowserModule,

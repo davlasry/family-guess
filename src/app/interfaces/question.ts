@@ -6,5 +6,5 @@ export interface Question {
   key: string;
   toRemoveIfYes?: string[];
   toRemoveIfNo?: string[];
-  additionalQuestionCondition?: QuestionKeys[];
+  higherOrderQuestion?: QuestionKeys;
 }

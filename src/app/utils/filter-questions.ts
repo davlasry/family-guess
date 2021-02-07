@@ -10,7 +10,6 @@ export const filterQuestionsDeps = (questions: Question[], answeredQuestion: Que
       return false;
     }
 
-    console.log('question');
     return isQuestionHelpful(question, remainingPersons);
   });
 };

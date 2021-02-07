@@ -26,13 +26,15 @@ export const QUESTIONS: Question[] = [
     text: 'Do I have blue eyes?',
     filterFunction: (person: Person) => person.eyesColor === EyesColor.BLUE,
     key: QuestionKeys.EYES_BLUE,
-    toRemoveIfYes: [QuestionKeys.EYES_GREEN]
+    toRemoveIfYes: [QuestionKeys.EYES_GREEN],
+    higherOrderQuestion: QuestionKeys.IS_WOMAN
   },
   {
     text: 'Do I have green eyes?',
     filterFunction: (person: Person) => person.eyesColor === EyesColor.GREEN,
     key: QuestionKeys.EYES_GREEN,
-    toRemoveIfYes: [QuestionKeys.EYES_BLUE]
+    toRemoveIfYes: [QuestionKeys.EYES_BLUE],
+    higherOrderQuestion: QuestionKeys.IS_WOMAN
   },
   /** AGE */
   {
@@ -45,7 +47,7 @@ export const QUESTIONS: Question[] = [
     text: 'Am I younger than 30 (or 30)?',
     filterFunction: (person: Person) => person.age <= 30,
     key: QuestionKeys.AGE_30_OR_LESS,
-    toRemoveIfYes: [QuestionKeys.AGE_MORE_30]
+    toRemoveIfYes: [QuestionKeys.AGE_MORE_30, QuestionKeys.IS_GRAND_PARENT, QuestionKeys.IS_GRAND_GRAND_PARENT]
   },
   /** SEX */
   {
@@ -72,22 +74,26 @@ export const QUESTIONS: Question[] = [
   {
     text: 'Do I have (or had) a younger sister?',
     filterFunction: (person: Person) => person.hasYoungerSister,
-    key: QuestionKeys.HAS_YOUNGER_SISTER
+    key: QuestionKeys.HAS_YOUNGER_SISTER,
+    higherOrderQuestion: QuestionKeys.IS_WOMAN
   },
   {
     text: 'Do I have (or had) an older sister?',
     filterFunction: (person: Person) => person.hasOlderSister,
-    key: QuestionKeys.HAS_OLDER_SISTER
+    key: QuestionKeys.HAS_OLDER_SISTER,
+    higherOrderQuestion: QuestionKeys.IS_WOMAN
   },
   {
     text: 'Do I have (or had) an older brother?',
     filterFunction: (person: Person) => person.hasOlderBrother,
-    key: QuestionKeys.HAS_OLDER_BROTHER
+    key: QuestionKeys.HAS_OLDER_BROTHER,
+    higherOrderQuestion: QuestionKeys.IS_WOMAN
   },
   {
     text: 'Do I have (or had) a younger brother?',
     filterFunction: (person: Person) => person.hasYoungerBrother,
-    key: QuestionKeys.HAS_YOUNGER_BROTHER
+    key: QuestionKeys.HAS_YOUNGER_BROTHER,
+    higherOrderQuestion: QuestionKeys.IS_WOMAN
   },
   /** CHILDREN */
   {
@@ -100,13 +106,15 @@ export const QUESTIONS: Question[] = [
     text: 'Do I have great children?',
     filterFunction: (person: Person) => person.hasGreatChildren,
     key: QuestionKeys.IS_GRAND_PARENT,
-    toRemoveIfYes: [QuestionKeys.HAS_CHILDREN, QuestionKeys.IS_GRAND_GRAND_PARENT]
+    toRemoveIfYes: [QuestionKeys.HAS_CHILDREN, QuestionKeys.IS_GRAND_GRAND_PARENT],
+    higherOrderQuestion: QuestionKeys.AGE_MORE_30
   },
   {
     text: 'Am I a grand-grand-parent?',
     filterFunction: (person: Person) => person.isGrandGrandParent,
     key: QuestionKeys.IS_GRAND_GRAND_PARENT,
-    toRemoveIfNo: [QuestionKeys.HAS_CHILDREN]
+    toRemoveIfNo: [QuestionKeys.HAS_CHILDREN],
+    higherOrderQuestion: QuestionKeys.AGE_MORE_30
   },
   /** MARRIED */
   {
@@ -138,7 +146,8 @@ export const QUESTIONS: Question[] = [
     text: 'Do I live in Israel?',
     filterFunction: (person: Person) => person.residenceCountry === Countries.ISRAEL,
     key: QuestionKeys.LIVES_ISRAEL,
-    toRemoveIfYes: [QuestionKeys.LIVES_FRANCE]
+    toRemoveIfYes: [QuestionKeys.LIVES_FRANCE],
+    toRemoveIfNo: [QuestionKeys.LIVES_JERUSALEM]
   },
   {
     text: 'Do I live in France?',
@@ -150,7 +159,8 @@ export const QUESTIONS: Question[] = [
     text: 'Do I live in Jerusalem?',
     filterFunction: (person: Person) => person.livesJerusalem,
     key: QuestionKeys.LIVES_JERUSALEM,
-    toRemoveIfYes: [QuestionKeys.LIVES_FRANCE, QuestionKeys.LIVES_ISRAEL]
+    toRemoveIfYes: [QuestionKeys.LIVES_FRANCE, QuestionKeys.LIVES_ISRAEL],
+    higherOrderQuestion: QuestionKeys.LIVES_ISRAEL
   },
   /** FIRST NAME STARTS */
   {
@@ -171,11 +181,13 @@ export const QUESTIONS: Question[] = [
     filterFunction: (person: Person) => person.hasGlasses,
     key: QuestionKeys.HAS_GLASSES
   },
-  /** LONG EARS */
+  /** LONG EARS - ONLY FOR RABBITS! */
   {
     text: 'Do I have very long ears?',
     filterFunction: (person: Person) => person.hasLongEars,
-    key: QuestionKeys.HAS_LONG_EARS
+    key: QuestionKeys.HAS_LONG_EARS,
+    toRemoveIfYes: [QuestionKeys.IS_HUMAN, QuestionKeys.IS_ANIMAL],
+    higherOrderQuestion: QuestionKeys.IS_ANIMAL
   }
 ];
 

@@ -32,13 +32,13 @@
     "has_older_brother": "האם יש לי אח גדול?",
     "has_younger_brother": "האם יש לי אח קטן?",
     "is_married": "האם אני נשוי או נשואה?",
-    "born_morocco": "האם נולדתי ב מורוקו?",
+    "born_morocco": "האם נולדתי במורוקו?",
     "born_france": "האם נולדתי בצרפת?",
     "born_israel": "האם נולדתי בארץ?",
     "lives_israel": "האם אני גר(ה) בארץ?",
     "lives_france": "האם אני גר(ה) בצרפת?",
-    "first_name_starts_a": "האם השם השם שלי מתחיל ב'א'?",
-    "name_starts_n": "האם השם השם שלי מתחיל ב'נ'?",
+    "first_name_starts_a": "האם השם שלי מתחיל ב'א'?",
+    "name_starts_n": "האם השם שלי מתחיל ב'נ'?",
     "has_glasses": "האם יש לי משקפיים רוב הזמן?",
     "is_grand_grand_parent": "האם אני סבא או סבטא רבה?",
     "has_long_ears": "האם יש לי אזניים מאד ארוכות?",
@@ -80,6 +80,7 @@
     "alan": "אלן",
     "shlomo": "שלמה",
     "moshe":  "משה",
-    "annie":  "אני טמר"
+    "annie":  "אני תמר",
+    "chase":  "צייס"
   }
 }

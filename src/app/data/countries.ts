@@ -4,5 +4,6 @@ export enum Countries {
   ISRAEL = 'israel',
   AUSTRIA = 'austria',
   TUNISIA = 'tunisia',
-  USA = 'usa'
+  USA = 'usa',
+  SWITZERLAND = 'switzerland'
 }

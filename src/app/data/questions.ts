@@ -12,14 +12,16 @@ export const QUESTIONS: Question[] = [
     filterFunction: (person: Person) => person.isHuman,
     key: QuestionKeys.IS_HUMAN,
     toRemoveIfYes: [QuestionKeys.IS_ANIMAL],
-    toRemoveIfNo: [QuestionKeys.IS_ANIMAL]
+    toRemoveIfNo: [QuestionKeys.IS_ANIMAL],
+    higherOrderQuestion: QuestionKeys.IS_WOMAN
   },
   {
     text: 'Am I an animal?',
     filterFunction: (person: Person) => !person.isHuman,
     key: QuestionKeys.IS_ANIMAL,
     toRemoveIfYes: [QuestionKeys.IS_HUMAN],
-    toRemoveIfNo: [QuestionKeys.IS_HUMAN]
+    toRemoveIfNo: [QuestionKeys.IS_HUMAN],
+    higherOrderQuestion: QuestionKeys.IS_MAN
   },
   /** EYES COLOR */
   {
@@ -114,7 +116,14 @@ export const QUESTIONS: Question[] = [
     filterFunction: (person: Person) => person.isGrandGrandParent,
     key: QuestionKeys.IS_GRAND_GRAND_PARENT,
     toRemoveIfNo: [QuestionKeys.HAS_CHILDREN],
-    higherOrderQuestion: QuestionKeys.AGE_MORE_30
+    higherOrderQuestion: QuestionKeys.IS_GRAND_PARENT
+  },
+  {
+    text: 'Do I have more than 2 children?',
+    filterFunction: (person: Person) => person.childrenNumber > 2,
+    key: QuestionKeys.HAS_MORE_2_CHILDREN,
+    toRemoveIfYes: [QuestionKeys.HAS_CHILDREN],
+    higherOrderQuestion: QuestionKeys.HAS_CHILDREN
   },
   /** MARRIED */
   {
@@ -153,7 +162,7 @@ export const QUESTIONS: Question[] = [
     text: 'Do I live in France?',
     filterFunction: (person: Person) => person.residenceCountry === Countries.FRANCE,
     key: QuestionKeys.LIVES_FRANCE,
-    toRemoveIfYes: [QuestionKeys.LIVES_ISRAEL]
+    toRemoveIfYes: [QuestionKeys.LIVES_ISRAEL, QuestionKeys.LIVES_JERUSALEM]
   },
   {
     text: 'Do I live in Jerusalem?',
@@ -168,12 +177,14 @@ export const QUESTIONS: Question[] = [
     filterFunction: (person: Person) => person.name[0].toLowerCase() === 'a',
     key: QuestionKeys.FIRST_NAME_STARTS_A,
     toRemoveIfYes: [QuestionKeys.FIRST_NAME_STARTS_N],
+    higherOrderQuestion: QuestionKeys.IS_MAN
   },
   {
     text: 'Do my name starts with an "N"?',
     filterFunction: (person: Person) => person.name[0].toLowerCase() === 'n',
     key: QuestionKeys.FIRST_NAME_STARTS_N,
     toRemoveIfYes: [QuestionKeys.FIRST_NAME_STARTS_A],
+    higherOrderQuestion: QuestionKeys.IS_MAN
   },
   /** GLASSES */
   {

@@ -4,6 +4,7 @@ export enum QuestionKeys {
   EYES_GREEN = 'eyes_green',
   EYES_BLUE = 'eyes_blue',
   HAS_CHILDREN = 'has_children',
+  HAS_MORE_2_CHILDREN = 'has_more_2_children',
   AGE_MORE_30 = 'age_more_30',
   AGE_30_OR_LESS = 'age_30_or_less',
   IS_WOMAN = 'is_woman',

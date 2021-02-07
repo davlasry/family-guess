@@ -1,7 +1,7 @@
 import { Question } from 'src/app/interfaces/question';
 import { Person } from 'src/app/interfaces/person';
 
-export const filterQuestionsDeps = (questions: Question[], answeredQuestion: Question, answer: 'yes' | 'no', remainingPersons) => {
+export const filterQuestionsDeps = (questions: Question[], answeredQuestion: Question, answer: 'yes' | 'no' | 'none', remainingPersons) => {
   return questions.filter(question => {
     const isQuestionToRemoveIfYes = answer === 'yes' && answeredQuestion.toRemoveIfYes?.indexOf(question.key) > -1;
     const isQuestionToRemoveIfNo = answer === 'no' && answeredQuestion.toRemoveIfNo?.indexOf(question.key) > -1;

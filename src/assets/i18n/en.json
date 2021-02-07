@@ -16,7 +16,7 @@
     "is_animal": "Am I an animal?",
     "eyes_green": "Do I have green eyes?",
     "eyes_blue": "Do I have blue eyes?",
-    "has_children": "Do I have one or more child?",
+    "has_children": "Do I have one or more children?",
     "age_more_30": "Am I older than 30?",
     "age_30_or_less": "Am I younger than 30 (or 30)?",
     "is_woman": "Am I a woman?",
@@ -38,7 +38,8 @@
     "name_starts_n": "Do my name starts with an \"N\"?",
     "has_glasses": "Do I wear glasses?",
     "is_grand_grand_parent": "Am I a grand-grand-parent?",
-    "has_long_ears": "Do I have very long ears?"
+    "has_long_ears": "Do I have very long ears?",
+    "has_more_2_children": "Do I have more than 2 children?"
   }
 }
 

@@ -2,5 +2,7 @@ export enum Countries {
   MOROCCO = 'morocco',
   FRANCE = 'france',
   ISRAEL = 'israel',
-  OTHER = 'other'
+  AUSTRIA = 'austria',
+  TUNISIA = 'tunisia',
+  USA = 'usa'
 }

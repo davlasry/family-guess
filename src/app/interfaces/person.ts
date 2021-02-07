@@ -5,6 +5,7 @@ import { Countries } from 'src/app/data/countries';
 export interface Person {
   name: string;
   firstName: string;
+  key: string;
   images: string[];
   age: number;
   eyesColor: EyesColor;

@@ -16,10 +16,8 @@ export class AppComponent implements OnInit {
   persons = PERSONS;
   pastQuestions = [] as Question[];
 
-  // isFound = false;
-
   get isNotFound(): boolean {
-    return this.persons?.length === 0 || (!this.questionsList?.length && this.persons.length > 0);
+    return this.persons?.length === 0 || (!this.questionsList?.length && this.persons.length > 1);
   }
 
   get isFound(): boolean {
@@ -29,9 +27,7 @@ export class AppComponent implements OnInit {
   constructor(public translate: TranslateService) {
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en');
-
     translate.addLangs(['en', 'he']);
-
     // the lang to use, if the lang isn't available, it will use the current loader to get them
     translate.use('en');
   }
@@ -81,14 +77,17 @@ export class AppComponent implements OnInit {
     return pickedQuestion;
   }
 
-  // private checkIfFound(): void {
-  //   if (this.persons.length === 1) {
-  //     this.isFound = true;
-  //   }
-  // }
+  onClickIDontKnow(): void {
+    this.afterQuestionAnswered('none');
+  }
 
-  private afterQuestionAnswered(answer: 'yes' | 'no'): void {
-    this.questionsList = filterQuestionsDeps(this.questionsList, this.question, answer, this.persons);
+  private afterQuestionAnswered(answer: 'yes' | 'no' | 'none'): void {
+    if (answer === 'none') {
+      // TODO: remove all questions that require the answer to this question
+      this.questionsList = this.questionsList.filter(q => this.question.key !== q.key);
+    } else {
+      this.questionsList = filterQuestionsDeps(this.questionsList, this.question, answer, this.persons);
+    }
 
     console.log('QUESTIONS LIST ', this.questionsList);
 
@@ -98,5 +97,4 @@ export class AppComponent implements OnInit {
       this.pastQuestions.push(this.question);
     }
   }
-
 }

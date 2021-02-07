@@ -1,7 +1,8 @@
 <div class="game__container" [style.direction]="translate.currentLang === 'he' ? 'rtl' : 'ltr'">
-  <h1>Family guess</h1>
+  <h1>{{ 'words.title' | translate }}</h1>
 
-<!--  <h2>{{ 'test' | translate }}</h2>-->
+  <!--  <h2>{{ 'test' | translate }}</h2>-->
+  <h3>{{persons.length}}</h3>
 
   <div class="languages">
     <div (click)="translate.use(lang)" class="language" *ngFor="let lang of translate.getLangs()"
@@ -15,27 +16,25 @@
   <!--    <div *ngFor="let question of pastQuestions">{{ question?.text }}</div>-->
   <!--  </div>-->
 
+  <div class="question__title">{{ 'words.question' | translate }} {{ pastQuestions?.length }}</div>
+
   <div class="game__content">
 
     <div *ngIf="persons.length > 1 && questionsList && question" class="question__wrapper">
 
       <div class="question">
 
-        <div class="question__title">Question</div>
+        <div class="question__title">{{ 'words.question' | translate }} {{ pastQuestions?.length }}</div>
 
-        <div class="question__text">{{ question.text }}</div>
-
-<!--        <h4>question.key: {{question.key}}</h4>-->
-
-<!--        <div>{{ 'question.' + question.key | translate }}</div>-->
+        <div class="question__text">{{ 'question.' + question.key | translate }}</div>
 
       </div>
 
       <div class="answer-options">
         <button mat-raised-button color="accent" class="option big"
-                (click)="onClickNo()">{{ 'no' | translate }}</button>
+                (click)="onClickNo()">{{ 'words.no' | translate }}</button>
         <button mat-raised-button color="accent" class="option big"
-                (click)="onClickYes()">{{ 'yes' | translate }}</button>
+                (click)="onClickYes()">{{ 'words.yes' | translate }}</button>
       </div>
 
       <button mat-raised-button class="reset-button" (click)="initGame()">Reset</button>
@@ -43,28 +42,13 @@
     </div>
 
     <!-- PERSON FOUND -->
-    <div class="found" *ngIf="persons.length === 1">
+    <app-result [persons]="persons"
+                [questionsList]="questionsList"
+                [isNotFound]="isNotFound"
+                [isFound]="isFound"></app-result>
 
-      <div class="found__text">
-        The person you are thinking about is...
-      </div>
-
-      <div class="found__name">{{ persons[0].name }}</div>
-
-      <img src="assets/images/{{ persons[0].images | random }}" alt="" class="found__picture">
-
+    <div *ngIf="isFound || isNotFound">
       <button mat-raised-button color="primary" (click)="initGame()">Try again</button>
-
     </div>
-
-    <div class="not-found" *ngIf="persons.length === 0 || (!questionsList?.length && persons.length)">
-
-      <h2>We could not find it...</h2>
-
-      <button mat-raised-button color="primary" (click)="initGame()">Try again</button>
-
-    </div>
-
-  </div>
 
 </div>

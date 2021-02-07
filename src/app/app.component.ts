@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Question, questions } from 'src/app/data/questions';
-import { persons } from 'src/app/data/person';
-import { filterQuestionsDeps } from 'src/app/utils/filter-deps';
+import {  QUESTIONS } from 'src/app/data/questions';
+import { PERSONS } from 'src/app/data/persons';
+import { filterQuestionsDeps } from 'src/app/utils/filter-questions';
 import { TranslateService } from '@ngx-translate/core';
+import { Question } from 'src/app/interfaces/question';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent implements OnInit {
   question: Question;
-  questionsList = questions;
-  persons = persons;
+  questionsList = QUESTIONS;
+  persons = PERSONS;
   pastQuestions = [] as Question[];
 
   // isFound = false;
@@ -21,14 +22,18 @@ export class AppComponent implements OnInit {
     return this.persons?.length === 0 || (!this.questionsList?.length && this.persons.length > 0);
   }
 
+  get isFound(): boolean {
+    return this.persons.length === 1;
+  }
+
   constructor(public translate: TranslateService) {
     // this language will be used as a fallback when a translation isn't found in the current language
-    translate.setDefaultLang('en');
+    translate.setDefaultLang('he');
 
     translate.addLangs(['en', 'he']);
 
     // the lang to use, if the lang isn't available, it will use the current loader to get them
-    translate.use('en');
+    translate.use('he');
   }
 
   ngOnInit(): void {
@@ -36,7 +41,7 @@ export class AppComponent implements OnInit {
   }
 
   initGame(): void {
-    this.questionsList = questions;
+    this.questionsList = QUESTIONS;
     console.log('QUESTIONS LIST ', this.questionsList);
 
     this.question = this.getRandomQuestion();
@@ -44,7 +49,7 @@ export class AppComponent implements OnInit {
     console.log('QUESTION', this.question.text);
 
     this.pastQuestions = [this.question];
-    this.persons = persons;
+    this.persons = PERSONS;
   }
 
   onClickYes(): void {
@@ -75,17 +80,15 @@ export class AppComponent implements OnInit {
   // }
 
   private afterQuestionAnswered(answer: 'yes' | 'no'): void {
-    this.questionsList = filterQuestionsDeps(this.questionsList, this.question, answer);
-    // this.questionsList = this.questionsList.filter(q => q.key !== this.question.key);
+    this.questionsList = filterQuestionsDeps(this.questionsList, this.question, answer, this.persons);
 
     console.log('QUESTIONS LIST ', this.questionsList);
 
-    if (this.questionsList) {
+    if (this.questionsList?.length) {
       this.question = this.getRandomQuestion();
       console.log('QUESTION', this.question.text);
       this.pastQuestions.push(this.question);
     }
-    // this.checkIfFound();
   }
 
 }

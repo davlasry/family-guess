@@ -22,7 +22,8 @@ export enum QuestionKeys {
   LIVES_ISRAEL = 'lives_israel',
   LIVES_FRANCE = 'lives_france',
   FIRST_NAME_STARTS_A = 'first_name_starts_a',
-  FIRST_NAME_STARTS_S = 'name_starts_s',
+  FIRST_NAME_STARTS_N = 'name_starts_n',
   HAS_GLASSES = 'has_glasses',
-  IS_GRAND_GRAND_PARENT = 'is_grand_grand_parent'
+  IS_GRAND_GRAND_PARENT = 'is_grand_grand_parent',
+  HAS_LONG_EARS = 'has_long_ears'
 }

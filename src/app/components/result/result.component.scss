@@ -1,0 +1,40 @@
+.found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .found__text {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+
+    @media (min-width: 420px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .found__name {
+    font-size: 35px;
+    margin-bottom: 20px;
+
+    @media (min-width: 420px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .found__picture {
+    max-height: 250px;
+    margin-bottom: 30px;
+
+    @media (min-width: 420px) {
+      max-height: 400px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

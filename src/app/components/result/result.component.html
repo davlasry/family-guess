@@ -1,0 +1,17 @@
+<div class="found" *ngIf="isFound">
+
+  <div class="found__text">
+    {{ 'result.found.text' | translate }}
+  </div>
+
+  <div class="found__name">{{ persons[0].name }}</div>
+
+  <img src="assets/images/{{ persons[0].images | random }}" alt="" class="found__picture">
+
+</div>
+
+<div class="not-found" *ngIf="isNotFound">
+
+  <h2>We could not find it...</h2>
+
+</div>

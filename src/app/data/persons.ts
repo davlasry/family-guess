@@ -1,33 +1,9 @@
 import { EyesColor } from 'src/app/data/eyes-color';
 import { Sex } from 'src/app/data/sex';
 import { Countries } from 'src/app/data/countries';
+import { Person } from 'src/app/interfaces/person';
 
-export interface Person {
-  name: string;
-  firstName: string;
-  images: string[];
-  age: number;
-  eyesColor: EyesColor;
-  isHuman: boolean;
-  isMarried: boolean;
-  hasChildren: boolean;
-  hasGlasses: boolean;
-  sex: Sex;
-  speaksFrench: boolean;
-  livesJerusalem: boolean;
-  hasGreatChildren: boolean;
-  hasYoungerSister: boolean;
-  hasOlderSister: boolean;
-  hasYoungerBrother: boolean;
-  hasOlderBrother: boolean;
-  birthCountry: Countries;
-  residenceCountry: Countries;
-  isGrandGrandParent: boolean;
-  childrenNumber?: number;
-  hasLongEars?: boolean;
-}
-
-export const persons: Person[] = [
+export const PERSONS: Person[] = [
   {
     name: 'David',
     firstName: 'David',
@@ -527,27 +503,21 @@ export const persons: Person[] = [
   {
     name: 'Noemi',
     firstName: 'Noemi',
-    // TODO: CHECK
-    age: 38,
+    age: 32,
     eyesColor: EyesColor.BROWN,
     isHuman: true,
     isMarried: true,
     hasChildren: true,
     hasGlasses: false,
     sex: Sex.WOMAN,
-    // TODO: CHECK
-    hasYoungerSister: true,
     speaksFrench: true,
     livesJerusalem: true,
     hasGreatChildren: false,
     images: ['default.jpg'],
-    // TODO: CHECK
+    hasYoungerSister: false,
     hasOlderSister: true,
-    // TODO: CHECK
-    hasYoungerBrother: true,
-    // TODO: CHECK
-    hasOlderBrother: false,
-    // TODO: CHECK
+    hasYoungerBrother: false,
+    hasOlderBrother: true,
     birthCountry: Countries.FRANCE,
     residenceCountry: Countries.FRANCE,
     isGrandGrandParent: false,
@@ -629,5 +599,28 @@ export const persons: Person[] = [
     residenceCountry: Countries.ISRAEL,
     isGrandGrandParent: false,
     hasLongEars: true
+  },
+  {
+    name: 'Israel',
+    firstName: 'Israel',
+    age: 35,
+    eyesColor: EyesColor.BROWN,
+    isHuman: true,
+    isMarried: false,
+    hasChildren: true,
+    hasGlasses: false,
+    sex: Sex.MAN,
+    hasYoungerSister: true,
+    speaksFrench: false,
+    livesJerusalem: false,
+    hasGreatChildren: false,
+    images: ['default.jpg'],
+    hasOlderSister: true,
+    hasYoungerBrother: false,
+    hasOlderBrother: true,
+    birthCountry: Countries.ISRAEL,
+    residenceCountry: Countries.ISRAEL,
+    isGrandGrandParent: false,
+    childrenNumber: 2,
   },
 ];

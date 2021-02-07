@@ -1,34 +1,44 @@
 {
   "test": "Here is the test",
-  "yes": "Yes",
-  "no": "No",
+  "words": {
+    "yes": "Yes",
+    "no": "No",
+    "question": "Question",
+    "title": "Guess who I am"
+  },
+  "result": {
+    "found": {
+      "text": "You are thinking of..."
+    }
+  },
   "question": {
-    "is_human": "",
-    "is_animal": "",
-    "eyes_green": "",
-    "eyes_blue": "",
-    "has_children": "",
-    "age_more_30": "",
-    "age_30_or_less": "",
-    "is_woman": "",
-    "is_man": "",
-    "speaks_french": "",
-    "has_younger_sister": "",
-    "has_older_sister": "",
-    "lives_jerusalem": "",
-    "is_grand_parent": "",
-    "has_older_brother": "",
-    "has_younger_brother": "",
-    "is_married": "",
-    "born_morocco": "",
-    "born_france": "",
-    "born_israel": "",
-    "lives_israel": "",
-    "lives_france": "",
-    "first_name_starts_a": "",
-    "name_starts_s": "",
-    "has_glasses": "",
-    "is_grand_grand_parent": ""
+    "is_human": "Am I a human?",
+    "is_animal": "Am I an animal?",
+    "eyes_green": "Do I have green eyes?",
+    "eyes_blue": "Do I have blue eyes?",
+    "has_children": "Do I have one or more child?",
+    "age_more_30": "Am I older than 30?",
+    "age_30_or_less": "Am I younger than 30 (or 30)?",
+    "is_woman": "Am I a woman?",
+    "is_man": "Am I a man?",
+    "speaks_french": "Do I speak French?",
+    "has_younger_sister": "Do I have (or had) a younger sister?",
+    "has_older_sister": "Do I have (or had) an older sister?",
+    "lives_jerusalem": "Do I live in Jerusalem?",
+    "is_grand_parent": "Do I have great children?",
+    "has_older_brother": "Do I have (or had) an older brother?",
+    "has_younger_brother": "Do I have (or had) a younger brother?",
+    "is_married": "Am I married?",
+    "born_morocco": "Was I born in Morocco?",
+    "born_france": "Was I born in France?",
+    "born_israel": "Was I born in Israel?",
+    "lives_israel": "Do I live in Israel?",
+    "lives_france": "Do I live in France?",
+    "first_name_starts_a": "Do my first name starts with an \"A\"?",
+    "name_starts_n": "Do my name starts with an \"N\"?",
+    "has_glasses": "Do I wear glasses?",
+    "is_grand_grand_parent": "Am I a grand-grand-parent?",
+    "has_long_ears": "Do I have very long ears?"
   }
 }
 

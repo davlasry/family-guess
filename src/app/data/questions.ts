@@ -1,18 +1,11 @@
-import { Person } from 'src/app/data/person';
 import { Sex } from 'src/app/data/sex';
 import { Countries } from 'src/app/data/countries';
 import { EyesColor } from 'src/app/data/eyes-color';
 import { QuestionKeys } from 'src/app/data/questions-keys';
+import { Question } from 'src/app/interfaces/question';
+import { Person } from 'src/app/interfaces/person';
 
-export interface Question {
-  text: string;
-  filterFunction: (Person) => boolean;
-  key: string;
-  toRemoveIfYes?: string[];
-  toRemoveIfNo?: string[];
-}
-
-export const questions: Question[] = [
+export const QUESTIONS: Question[] = [
   /** HUMAN/ANIMAL */
   {
     text: 'Am I a human?',
@@ -107,7 +100,7 @@ export const questions: Question[] = [
     text: 'Do I have great children?',
     filterFunction: (person: Person) => person.hasGreatChildren,
     key: QuestionKeys.IS_GRAND_PARENT,
-    toRemoveIfYes: [QuestionKeys.IS_GRAND_PARENT, QuestionKeys.IS_GRAND_GRAND_PARENT]
+    toRemoveIfYes: [QuestionKeys.HAS_CHILDREN, QuestionKeys.IS_GRAND_GRAND_PARENT]
   },
   {
     text: 'Am I a grand-grand-parent?',
@@ -164,12 +157,12 @@ export const questions: Question[] = [
     text: 'Do my first name starts with an "A"?',
     filterFunction: (person: Person) => person.name[0].toLowerCase() === 'a',
     key: QuestionKeys.FIRST_NAME_STARTS_A,
-    toRemoveIfYes: [QuestionKeys.FIRST_NAME_STARTS_S],
+    toRemoveIfYes: [QuestionKeys.FIRST_NAME_STARTS_N],
   },
   {
-    text: 'Do my name starts with an "S"?',
-    filterFunction: (person: Person) => person.name[0].toLowerCase() === 's',
-    key: QuestionKeys.FIRST_NAME_STARTS_S,
+    text: 'Do my name starts with an "N"?',
+    filterFunction: (person: Person) => person.name[0].toLowerCase() === 'n',
+    key: QuestionKeys.FIRST_NAME_STARTS_N,
     toRemoveIfYes: [QuestionKeys.FIRST_NAME_STARTS_A],
   },
   /** GLASSES */
@@ -182,7 +175,7 @@ export const questions: Question[] = [
   {
     text: 'Do I have very long ears?',
     filterFunction: (person: Person) => person.hasLongEars,
-    key: QuestionKeys.HAS_GLASSES
+    key: QuestionKeys.HAS_LONG_EARS
   }
 ];
 

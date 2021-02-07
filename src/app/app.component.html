@@ -15,7 +15,7 @@
   <!--    <b>Past questions</b>-->
   <!--    <div *ngFor="let question of pastQuestions">{{ question?.text }}</div>-->
   <!--  </div>-->
-<!--  <div class="question__title">{{ 'words.question' | translate }} {{ pastQuestions?.length }}</div>-->
+  <!--  <div class="question__title">{{ 'words.question' | translate }} {{ pastQuestions?.length }}</div>-->
 
   <div class="game__content">
 
@@ -59,9 +59,17 @@
                 [isFound]="isFound"></app-result>
 
     <div *ngIf="isFound || isNotFound">
-      <button mat-raised-button color="primary" (click)="initGame()">Try again</button>
+      <button mat-raised-button color="primary" (click)="initGame()">{{ 'result.try_again' | translate }}</button>
     </div>
 
   </div>
 
 </div>
+
+<footer>
+  <audio src="assets/music/escalier.mp3" controls>
+    <p>If you are reading this, it is because your browser does not support the audio element.</p>
+  </audio>
+
+  <div class="game__credits">טליה ואביגיל ודוד</div>
+</footer>

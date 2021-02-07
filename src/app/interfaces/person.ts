@@ -26,4 +26,5 @@ export interface Person {
   isGrandGrandParent: boolean;
   childrenNumber?: number;
   hasLongEars?: boolean;
+  animalHasShortHair?: boolean;
 }

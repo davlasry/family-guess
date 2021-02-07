@@ -176,15 +176,22 @@ export const QUESTIONS: Question[] = [
     text: 'Do my first name starts with an "A"?',
     filterFunction: (person: Person) => person.name[0].toLowerCase() === 'a',
     key: QuestionKeys.FIRST_NAME_STARTS_A,
-    toRemoveIfYes: [QuestionKeys.FIRST_NAME_STARTS_N],
+    toRemoveIfYes: [QuestionKeys.FIRST_NAME_STARTS_N, QuestionKeys.FIRST_NAME_STARTS_R],
     higherOrderQuestion: QuestionKeys.IS_MAN
   },
   {
     text: 'Do my name starts with an "N"?',
     filterFunction: (person: Person) => person.name[0].toLowerCase() === 'n',
     key: QuestionKeys.FIRST_NAME_STARTS_N,
-    toRemoveIfYes: [QuestionKeys.FIRST_NAME_STARTS_A],
+    toRemoveIfYes: [QuestionKeys.FIRST_NAME_STARTS_A, QuestionKeys.FIRST_NAME_STARTS_R],
     higherOrderQuestion: QuestionKeys.IS_MAN
+  },
+  {
+    text: 'Do my name starts with an "R"?',
+    filterFunction: (person: Person) => person.name[0].toLowerCase() === 'ר',
+    key: QuestionKeys.FIRST_NAME_STARTS_R,
+    toRemoveIfYes: [QuestionKeys.FIRST_NAME_STARTS_A, QuestionKeys.FIRST_NAME_STARTS_N],
+    higherOrderQuestion: QuestionKeys.IS_WOMAN
   },
   /** GLASSES */
   {
@@ -197,6 +204,14 @@ export const QUESTIONS: Question[] = [
     text: 'Do I have very long ears?',
     filterFunction: (person: Person) => person.hasLongEars,
     key: QuestionKeys.HAS_LONG_EARS,
+    toRemoveIfYes: [QuestionKeys.IS_HUMAN, QuestionKeys.IS_ANIMAL],
+    higherOrderQuestion: QuestionKeys.IS_ANIMAL
+  },
+  /** ANIMAL - LONG vs SHORT HAIR */
+  {
+    text: 'Do I have short hair?',
+    filterFunction: (person: Person) => person.animalHasShortHair,
+    key: QuestionKeys.ANIMAL_HAS_SHORT_HAIR,
     toRemoveIfYes: [QuestionKeys.IS_HUMAN, QuestionKeys.IS_ANIMAL],
     higherOrderQuestion: QuestionKeys.IS_ANIMAL
   }

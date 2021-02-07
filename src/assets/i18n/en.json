@@ -12,7 +12,8 @@
   "result": {
     "found": {
       "text": "You are thinking of..."
-    }
+    },
+    "try_again": "Try again"
   },
   "question": {
     "is_human": "Am I a human?",
@@ -39,10 +40,12 @@
     "lives_france": "Do I live in France?",
     "first_name_starts_a": "Do my first name starts with an \"A\"?",
     "name_starts_n": "Do my name starts with an \"N\"?",
+    "name_starts_r": "Do my name starts with an \"R\"?",
     "has_glasses": "Do I wear glasses?",
     "is_grand_grand_parent": "Am I a grand-grand-parent?",
     "has_long_ears": "Do I have very long ears?",
-    "has_more_2_children": "Do I have more than 2 children?"
+    "has_more_2_children": "Do I have more than 2 children?",
+    "animal_has_short_hair": "Do I have short hair?"
   },
   "firstName": {
     "david": "David",
@@ -97,8 +100,15 @@
     "gary": "Gary Lasry",
     "mickael_lasry": "Mickael Lasry",
     "sarah_hamou": "Sarah Hamou",
+    "annaelle_hamou": "Annaelle Hamou",
+    "helene": "Helene Ermentier",
+    "mickael_finel": "Mickael Finel",
+    "sarah_finel": "Sarah Finel",
     "chase": "Chase",
-    "ruty":  "Ruti"
+    "ruty":  "Ruti",
+    "miri":  "Miri",
+    "barbi": "Barbi",
+    "odaya":  "Odaya"
   }
 }
 

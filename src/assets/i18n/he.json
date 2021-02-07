@@ -7,12 +7,13 @@
   "buttons": {
     "yes": "כן",
     "no": "לא",
-    "dont_know": "אינני יודעה"
+    "dont_know": "אינני יודע"
   },
   "result": {
     "found": {
       "text": "אתם חושבים על...."
-    }
+    },
+    "try_again": "נסה שוב"
   },
   "question": {
     "is_human": "האם אני בן אדם?",
@@ -38,11 +39,13 @@
     "lives_israel": "האם אני גר(ה) בארץ?",
     "lives_france": "האם אני גר(ה) בצרפת?",
     "first_name_starts_a": "האם השם שלי מתחיל ב'א'?",
+    "name_starts_r": "האם השם שלי מתחיל ב'ר'?",
     "name_starts_n": "האם השם שלי מתחיל ב'נ'?",
     "has_glasses": "האם יש לי משקפיים רוב הזמן?",
     "is_grand_grand_parent": "האם אני סבא או סבטא רבה?",
     "has_long_ears": "האם יש לי אזניים מאד ארוכות?",
-    "has_more_2_children": "האם יש לי יותר מ2 ילדים?"
+    "has_more_2_children": "האם יש לי יותר מ2 ילדים?",
+    "animal_has_short_hair": "האם יש לי שער קצר?"
   },
   "firstName": {
     "david": "דוד",
@@ -82,6 +85,9 @@
     "moshe":  "משה",
     "annie":  "אני תמר",
     "chase":  "צייס",
-    "ruti":  "רותי"
+    "ruti":  "רותי",
+    "miri":  "מירי",
+    "barbi":  "ברבי",
+    "odaya":  "הודיה"
   }
 }

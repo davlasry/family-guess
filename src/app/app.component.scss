@@ -42,7 +42,7 @@
     .option {
       margin: 0 10px;
 
-      @media (min-width: 400px) {
+      @media (min-width: 420px) {
         margin: 0 40px;
       }
     }
@@ -100,5 +100,20 @@ button {
     width: 130px;
     height: 40px;
     font-size: 16px;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  margin-right: 10px;
+  color: #030306;
+  font-weight: 500;
+
+  @media (min-width: 420px) {
+    font-size: 24px;
   }
 }

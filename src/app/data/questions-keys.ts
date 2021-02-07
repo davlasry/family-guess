@@ -24,7 +24,9 @@ export enum QuestionKeys {
   LIVES_FRANCE = 'lives_france',
   FIRST_NAME_STARTS_A = 'first_name_starts_a',
   FIRST_NAME_STARTS_N = 'name_starts_n',
+  FIRST_NAME_STARTS_R = 'name_starts_r',
   HAS_GLASSES = 'has_glasses',
   IS_GRAND_GRAND_PARENT = 'is_grand_grand_parent',
-  HAS_LONG_EARS = 'has_long_ears'
+  HAS_LONG_EARS = 'has_long_ears',
+  ANIMAL_HAS_SHORT_HAIR = 'animal_has_short_hair',
 }

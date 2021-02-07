@@ -4,9 +4,9 @@
     {{ 'result.found.text' | translate }}
   </div>
 
-  <div class="found__name">{{ persons[0].name }}</div>
+  <div class="found__name">{{ ('firstName.' + person.key | translate) ||  person.name }}</div>
 
-  <img src="assets/images/{{ persons[0].images | random }}" alt="" class="found__picture">
+  <img src="assets/images/{{ person?.images | random }}" alt="" class="found__picture">
 
 </div>
 

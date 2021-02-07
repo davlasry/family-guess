@@ -26,10 +26,18 @@
   align-items: center;
   flex: 1;
 
+  .answers__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .answer-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 
     .option {
       margin: 0 10px;

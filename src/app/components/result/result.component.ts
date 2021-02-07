@@ -9,7 +9,7 @@ import { Person } from 'src/app/interfaces/person';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ResultComponent {
-  @Input() persons: Person[];
+  @Input() person: Person;
   @Input() questionsList: Question[];
   @Input() isNotFound: boolean;
   @Input() isFound: boolean;

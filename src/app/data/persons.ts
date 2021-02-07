@@ -747,9 +747,9 @@ export const PERSONS: Person[] = [
     childrenNumber: 3,
   },
   {
-    name: 'Dan',
+    name: 'Dan Banoun',
     firstName: 'Dan',
-    key: 'dan',
+    key: 'dan_banoun',
     age: 67,
     eyesColor: EyesColor.BROWN,
     isHuman: true,

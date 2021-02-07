@@ -1,10 +1,13 @@
 {
   "test": "הינה הטסט",
   "words": {
-    "yes": "כן",
-    "no": "לא",
     "question": "שאלה",
     "title": "תנחש מי אני"
+  },
+  "buttons": {
+    "yes": "כן",
+    "no": "לא",
+    "dont_know": "אינני יודעה"
   },
   "result": {
     "found": {
@@ -32,13 +35,51 @@
     "born_morocco": "האם נולדתי ב מורוקו?",
     "born_france": "האם נולדתי בצרפת?",
     "born_israel": "האם נולדתי בארץ?",
-    "lives_israel": "האם אני גר בארץ?",
-    "lives_france": "האם אני גר בצרפת?",
+    "lives_israel": "האם אני גר(ה) בארץ?",
+    "lives_france": "האם אני גר(ה) בצרפת?",
     "first_name_starts_a": "האם השם השם שלי מתחיל ב'א'?",
     "name_starts_n": "האם השם השם שלי מתחיל ב'נ'?",
     "has_glasses": "האם יש לי משקפיים רוב הזמן?",
     "is_grand_grand_parent": "האם אני סבא או סבטא רבה?",
     "has_long_ears": "האם יש לי אזניים מאד ארוכות?",
     "has_more_2_children": "האם יש לי יותר מ2 ילדים?"
+  },
+  "firstName": {
+    "david": "דוד",
+    "caro": "קרו",
+    "bamboo": "במבו",
+    "avigail": "אביגיל",
+    "eva": "אווה",
+    "talia": "טליה",
+    "aurelie": "אורלי",
+    "remy": "פאפא",
+    "myriam": "ממו",
+    "joel": "גיואל",
+    "yanir": "יניר",
+    "laura": "לורה",
+    "steven": "סטיוון",
+    "danielle": "דניאל",
+    "rachel": "ממו רשל",
+    "suzanne": "סוזן",
+    "simon": "סימון",
+    "thierry": "טירי",
+    "anna": "אנא",
+    "idan": "עידן",
+    "naomi": "נעומי",
+    "paul": "חיים",
+    "noemi": "נועמי",
+    "yosef": "פפי יוסף",
+    "yvette": "איווט",
+    "jacques": "גיק",
+    "israel": "ישראל",
+    "luc": "לוק מאיר",
+    "willy": "ווילי",
+    "harry": "הרי",
+    "suzy": "סוזי",
+    "dan_banoun": "דן בנון",
+    "alan": "אלן",
+    "shlomo": "שלמה",
+    "moshe":  "משה",
+    "annie":  "אני טמר"
   }
 }

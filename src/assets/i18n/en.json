@@ -1,10 +1,13 @@
 {
   "test": "Here is the test",
   "words": {
-    "yes": "Yes",
-    "no": "No",
     "question": "Question",
     "title": "Guess who I am"
+  },
+  "buttons": {
+    "yes": "Yes",
+    "no": "No",
+    "dont_know": "I don't know"
   },
   "result": {
     "found": {
@@ -40,6 +43,60 @@
     "is_grand_grand_parent": "Am I a grand-grand-parent?",
     "has_long_ears": "Do I have very long ears?",
     "has_more_2_children": "Do I have more than 2 children?"
+  },
+  "firstName": {
+    "david": "David",
+    "caro": "Caro",
+    "bamboo": "Bamboo",
+    "avigail": "Avigail",
+    "eva": "Eva",
+    "talia": "Talia",
+    "aurelie": "Aurelie",
+    "remy": "Remy a.k.a Papa",
+    "myriam": "Myriam a.k.a Maman",
+    "joel": "Joel",
+    "yanir": "Yanir",
+    "laura": "Laura",
+    "steven": "Steven",
+    "danielle": "Danielle",
+    "rachel": "Maman Rachel",
+    "suzanne": "Suzanne",
+    "simon": "Simon",
+    "thierry": "Thierry",
+    "anna": "Anna",
+    "idan": "Idan",
+    "naomi": "Naomi",
+    "paul": "Paul",
+    "noemi": "Noemi",
+    "yosef": "Papi Yosef",
+    "yvette": "Mami Yvette",
+    "jacques": "Jacques",
+    "israel": "Israel",
+    "luc": "Luc",
+    "willy": "Willy",
+    "harry": "Harry",
+    "suzy": "Suzy",
+    "dan_banoun": "Dan Banoun",
+    "alan": "Alan",
+    "shlomo": "Shlomo",
+    "moshe": "Moshe",
+    "annie": "Annie",
+    "leo": "Leo",
+    "sam": "Samuel",
+    "david_banoun": "David Banoun",
+    "raphael_isvy": "Raphael Isvy",
+    "nicole_isvy": "Nicole Isvy",
+    "dolly": "Dolly",
+    "eric_zeitoun": "Eric Zeitoun",
+    "jordan_perez": "Jordan Perez",
+    "david_prato": "David Prato",
+    "thierry_lasry": "Thierry Lasry",
+    "armand": "Armand Tordjman",
+    "shlomi": "Shlomi Levi",
+    "guy": "Paguy",
+    "gary": "Gary Lasry",
+    "mickael_lasry": "Mickael Lasry",
+    "sarah_hamou": "Sarah Hamou"
   }
 }
 

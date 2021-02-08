@@ -106,7 +106,7 @@ button {
 
 footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
@@ -114,7 +114,17 @@ footer {
   color: #030306;
   font-weight: 500;
 
+  audio {
+    flex: 1;
+    margin-bottom: 10px;
+
+    @media (min-width: 420px) {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+
   @media (min-width: 420px) {
-    font-size: 24px;
+    flex-direction: row;
   }
 }

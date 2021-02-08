@@ -7,7 +7,8 @@
   "buttons": {
     "yes": "Yes",
     "no": "No",
-    "dont_know": "I don't know"
+    "dont_know": "I don't know",
+    "reset": "Reset"
   },
   "result": {
     "found": {
@@ -49,7 +50,7 @@
   },
   "firstName": {
     "david": "David",
-    "caro": "Caro",
+    "caroline": "Caro",
     "bamboo": "Bamboo",
     "avigail": "Avigail",
     "eva": "Eva",

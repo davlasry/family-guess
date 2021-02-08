@@ -7,7 +7,8 @@
   "buttons": {
     "yes": "כן",
     "no": "לא",
-    "dont_know": "אינני יודע"
+    "dont_know": "אינני יודע",
+    "reset": "איפוס"
   },
   "result": {
     "found": {
@@ -49,7 +50,7 @@
   },
   "firstName": {
     "david": "דוד",
-    "caro": "קרו",
+    "caroline": "קרו",
     "bamboo": "במבו",
     "avigail": "אביגיל",
     "eva": "אווה",

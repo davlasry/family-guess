@@ -565,7 +565,7 @@ export const PERSONS: Person[] = [
     speaksFrench: true,
     livesJerusalem: false,
     hasGreatChildren: true,
-    images: ['default.jpg'],
+    images: ['papi_1.jpg'],
     // TODO: CHECK
     hasOlderSister: false,
     // TODO: CHECK
